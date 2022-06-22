@@ -1,0 +1,33 @@
+from cmath import sqrt
+
+class Bhaskara(object):
+    delta = float
+    x1 = float
+    x2 = float
+
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+    #Fórmula de Bhaskara:
+    #delta= b^2-4*a*c
+    #x1=(-b+sqrd(delta))/2*a
+    #x2=(-b-sqrd(delta))/2*a
+
+    def calc_delta(self):
+            self.delta = ((self.b**2)-4*self.a*self.c)
+            print(f"Delta = {self.delta}")
+
+    def calc_x1(self):
+        self.x1 = (((self.b*-1)+(sqrt(self.delta)))/(2*self.a))
+        print(f"X1 = {self.x1}")
+
+    def calc_x2(self):
+        self.x2 = ((((self.b*-1)-(sqrt(self.delta)))/(2*self.a)))
+        print(f"X2 = {self.x2}")
+
+#teste
+equacao1 = Bhaskara(1,4,1)
+equacao1.calc_delta()
+equacao1.calc_x1()
+equacao1.calc_x2()
